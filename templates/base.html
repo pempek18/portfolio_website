@@ -9,23 +9,16 @@
 </head>
 <body>
     <table>
-        <td class="left-column">
+        <tr>
+            <td class="left-column">
                 <div class="sidebar">
                     <!-- Left column content -->
                     <div class="profile-section">
                         <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Profile Photo" class="profile-photo">
-                        <h2>Patryk Zadroga</h2>
-                        <p>Automation Engineer</p>
-                    </div>
-                    <div class="contact-info">
-                        <p>Email: contact@example.com</p>
-                        <p>Phone: +48 XXX XXX XXX</p>
-                        <p>Location: Poland</p>
                     </div>
                 </div>
-        </td>
-        <td class="right-column">
-            <tr>
+            </td>
+            <td class="right-column">
                 <nav class="header-nav">
                     <div class="logo">Patryk Zadroga</div>
                     <div class="menu">
@@ -37,14 +30,24 @@
                         {% endblock %}
                     </div>
                 </nav>
-                <div class="main-content">
-                    <!-- Right column content will be populated by child templates -->
+            </td>
+        </tr>
+        <tr>
+            <td class="left-column">
+                <div class="sidebar">
+                    <div class="contact-info">
+                        <h2>Patryk Zadroga</h2>
+                        <p>Automation Engineer</p>
+                        <p>Email: contact@example.com</p>
+                        <p>Phone: +48 XXX XXX XXX</p>
+                        <p>Location: Poland</p>
+                    </div>
                 </div>
-            </tr>
-            <tr>
+            </td>
+            <td class="right-column">
                 {% block content %}{% endblock %}
-            </tr>
-        </td>        
+            </td>
+        </tr>
     </table>
 
 </body>

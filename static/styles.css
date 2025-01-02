@@ -61,8 +61,8 @@ nav {
 
 .header-nav {
     background-color:yellow;
-    /* border-radius: 10px; */
-    /* padding: 5px 10px; */
+    padding:  5rem;
+    /* border-radius: 20px; */
 }
 .main-container {
     background-color:white;
@@ -156,4 +156,14 @@ nav {
 }
 .sidebar {
     background-color:grey;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    box-sizing: border-box;
+    min-height: 100%;
+}
+.profile-photo {
+    border: 10px solid white;
 }
