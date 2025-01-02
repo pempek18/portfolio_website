@@ -65,7 +65,7 @@ nav {
     /* padding: 5px 10px; */
 }
 .main-container {
-    background-color:grey;
+    background-color:white;
     font-size: 1.0rem;
 }
 
@@ -136,9 +136,6 @@ nav {
     display: flex;
     justify-content: left;
     margin: 1rem 1rem;
-    /* background-color:white;
-    border-radius: 10px;
-    padding: 5px 10px; */
 }
 
 .download-button {
@@ -156,4 +153,7 @@ nav {
     background-color:yellow;
     border-radius: 10px;
     padding: 5px 10px;
+}
+.sidebar {
+    background-color:grey;
 }
