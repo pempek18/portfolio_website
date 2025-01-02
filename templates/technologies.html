@@ -1,0 +1,47 @@
+{% extends "base.html" %}
+
+{% block title %}Technologie{% endblock %}
+
+{% block nav_menu %}
+<a href="{{ url_for('index') }}">Strona główna</a>
+<a href="{{ url_for('services') }}">Usługi</a>
+<a href="{{ url_for('production') }}">Realizacje</a>
+<a href="{{ url_for('experience') }}">Doświadczenie</a>
+{% endblock %}
+
+{% block content %}
+
+<h1>Technologie</h1>
+        
+        <div class="projects-grid">
+            <div class="project-card">
+                <img src="images/plc.jpg" alt="PLC">
+                <h3>PLC</h3>
+                <p>Programowanie sterowników logicznych i systemów automatyki przemysłowej</p>
+            </div>
+
+            <div class="project-card">
+                <img src="images/vision.jpg" alt="Vision">
+                <h3>Vision</h3>
+                <p>Systemy wizyjne i przetwarzanie obrazu w zastosowaniach przemysłowych</p>
+            </div>
+
+            <div class="project-card">
+                <img src="images/ml.jpg" alt="Machine Learning">
+                <h3>Machine Learning</h3>
+                <p>Implementacja algorytmów uczenia maszynowego w procesach przemysłowych</p>
+            </div>
+
+            <div class="project-card">
+                <img src="images/llm.jpg" alt="LLM">
+                <h3>Large Language Models</h3>
+                <p>Wykorzystanie modeli językowych w automatyzacji i optymalizacji procesów</p>
+            </div>
+            
+            <div class="project-card">
+                <img src="images/desktop.jpg" alt="Aplikacje desktopowe">
+                <h3>Aplikacje desktopowe</h3>
+                <p>Tworzenie dedykowanych aplikacji desktopowych dla przemysłu</p>
+            </div>
+        </div>
+{% endblock %} 

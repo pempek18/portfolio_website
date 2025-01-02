@@ -61,11 +61,19 @@ nav {
 
 .header-nav {
     background-color:yellow;
+    /* border-radius: 10px; */
+    /* padding: 5px 10px; */
 }
 .main-container {
     background-color:grey;
     font-size: 1.0rem;
 }
+
+.main-description {
+    padding: 2rem;
+    line-height: 1.6;
+}
+
 .text-list {
     list-style-type: none;
     padding-left: 2rem;
@@ -93,7 +101,7 @@ nav {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
-    padding: 2rem 0;
+    padding: 2rem 2rem;
 }
 
 .project-card {
@@ -120,6 +128,32 @@ nav {
 }
 
 .project-card p {
-    padding: 0 1rem 1rem;
+    padding:  1rem 1rem;
     color: #666;
 } 
+
+.cv-download {
+    display: flex;
+    justify-content: left;
+    margin: 1rem 1rem;
+    /* background-color:white;
+    border-radius: 10px;
+    padding: 5px 10px; */
+}
+
+.download-button {
+    text-decoration: none;
+    color: var(--primary-color);
+    font-weight: 500;
+    transition: color 0.3s ease;
+    background-color:white;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
+
+.download-button:hover {
+    color: var(--accent-color);
+    background-color:yellow;
+    border-radius: 10px;
+    padding: 5px 10px;
+}

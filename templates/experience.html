@@ -1,0 +1,80 @@
+{% extends "base.html" %}
+
+{% block title %}Doświadczenie{% endblock %}
+
+{% block nav_menu %}
+<a href="{{ url_for('index') }}">Strona główna</a>
+<a href="{{ url_for('technologies') }}">Technologie</a>
+<a href="{{ url_for('services') }}">Usługi</a>
+<a href="{{ url_for('production') }}">Realizacje</a>
+{% endblock %}
+
+{% block content %}
+<main class="main-container"></main>
+    <h1>Curriculum Vitae</h1>
+    <div class="cv-download">
+        <a href="{{ url_for('static', filename='PZ_06_01_2024.pdf') }}" class="download-button" download>
+            <button>Pobierz CV</button>
+        </a>
+    </div>
+    <h1>Doświadczenie Zawodowe</h1>
+    
+    <div class="experience-grid">
+        <div class="experience-card">
+            <div class="experience-header">
+                <h3>Automatyk</h3>
+                <span class="date">2020 - Obecnie</span>
+            </div>
+            <p class="company">Firma Przemysłowa</p>
+            <ul>
+                <li>Projektowanie i wdrażanie systemów automatyki przemysłowej</li>
+                <li>Programowanie sterowników PLC i systemów SCADA</li>
+                <li>Optymalizacja procesów produkcyjnych</li>
+                <li>Integracja systemów robotycznych</li>
+                <li>Zarządzanie projektami automatyzacji</li>
+            </ul>
+        </div>
+
+        <!-- Add more experience cards with your actual experience -->
+    </div>
+
+    <div class="skills-section">
+        <h2>Umiejętności Techniczne</h2>
+        <div class="skills-grid">
+            <div class="skill-card">
+                <h4>Programowanie PLC</h4>
+                <ul>
+                    <li>Siemens S7</li>
+                    <li>Allen Bradley</li>
+                    <li>Beckhoff</li>
+                </ul>
+            </div>
+            <div class="skill-card">
+                <h4>Systemy SCADA</h4>
+                <ul>
+                    <li>WinCC</li>
+                    <li>InTouch</li>
+                    <li>iFIX</li>
+                </ul>
+            </div>
+            <!-- Add more skill cards -->
+        </div>
+    </div>
+
+    <div class="education-section">
+        <h2>Wykształcenie</h2>
+        <div class="education-card">
+            <div class="education-header">
+                <h3>Automatyka i Robotyka</h3>
+                <span class="date">2015 - 2020</span>
+            </div>
+            <p class="school">Politechnika</p>
+            <p class="specialization">Specjalizacja: Systemy sterowania</p>
+            <ul>
+                <li>Projektowanie systemów automatyki</li>
+                <li>Robotyka przemysłowa</li>
+                <li>Systemy wizyjne</li>
+            </ul>
+        </div>
+    </div>
+{% endblock %} 

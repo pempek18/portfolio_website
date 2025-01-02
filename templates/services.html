@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Usługi{% endblock %}
+
+{% block nav_menu %}
+<a href="{{ url_for('index') }}">Strona główna</a>
+<a href="{{ url_for('technologies') }}">Technologie</a>
+<a href="{{ url_for('production') }}">Realizacje</a>
+<a href="{{ url_for('experience') }}">Doświadczenie</a>
+{% endblock %}
+
+{% block content %}
+<main class="main-container">
+    <h1>Moje Usługi</h1>
+    
+    <div class="projects-grid">
+        <div class="project-card">
+            <img src="images/modernizacja.jpg" alt="Modernizacja Maszyn">
+            <h3>Modernizacja Maszyn</h3>
+            <p>Kompleksowa modernizacja i automatyzacja istniejących maszyn przemysłowych</p>
+        </div>
+
+        <div class="project-card">
+            <img src="images/wsparcie.jpg" alt="Wsparcie w przemyśle">
+            <h3>Wsparcie w przemyśle</h3>
+            <p>Profesjonalne wsparcie techniczne i konsultacje w zakresie automatyzacji przemysłowej</p>
+        </div>
+
+        <div class="project-card">
+            <img src="images/aplikacje.jpg" alt="Aplikacje Dla firm">
+            <h3>Aplikacje Dla firm</h3>
+            <p>Tworzenie dedykowanych aplikacji przemysłowych i systemów sterowania</p>
+        </div>
+
+        <div class="project-card">
+            <img src="images/produkcja.jpg" alt="Produkcja maszyn">
+            <h3>Produkcja maszyn</h3>
+            <p>Projektowanie i produkcja zautomatyzowanych maszyn na zamówienie</p>
+        </div>
+
+        <div class="project-card">
+            <img src="images/lakiernia.jpg" alt="Lakiernia">
+            <h3>Lakiernia</h3>
+            <p>Automatyzacja procesów lakierniczych i systemów malowania przemysłowego</p>
+        </div>
+
+        <div class="project-card">
+            <img src="images/konstrukcja.jpg" alt="Konstrukcja">
+            <h3>Konstrukcja</h3>
+            <p>Projektowanie i wykonawstwo konstrukcji mechanicznych oraz systemów automatyki</p>
+        </div>
+    </div>
+</main>
+{% endblock %}
