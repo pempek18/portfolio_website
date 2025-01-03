@@ -9,72 +9,180 @@
 <a href="{{ url_for('index') }}">Strona główna</a>
 {% endblock %}
 
+{% block left_column_content %}
+<h1 class="left_column_header">EDUCATION</h1>
+<div class="left_column_subheader">
+    <h2 >Bachelor of Electronics and Telecomunication</h2>
+    <h3 >Gdynia Maritime University</h3>
+    <p  >10.2012 - 06.2016</p>
+</div>
+<div class="left_column_subheader">
+    <h2 class="left_column_subheader">Matematyka-Fizyka-Informatyka</h2>
+    <h3>Liceum Ogólnokształcące im. Obrońców Westerplatte w Mrągowie</h3>
+    <p>09.2009 - 06.2012</p>
+</div>
+
+<h1 class="left_column_header">COURSES</h1>
+<div class="left_column_subheader">
+    <h2>AI_DEVS_3 AGENTS</h2>
+    <h3>BRAVE Courses Sp. z o.o.</h3>
+    <h3>Adam Gospodarczyk</h3>
+    <h3>Jakub Mrugalski</h3>
+    <h3>Maeusz Chrobok</h3>
+    <p>04.11.2024- 09.12.2024</p>
+</div>
+<div class="left_column_subheader">
+    <h2>Digital Threats</h2>
+    <h3>Kacper Szurek</h3>
+    <p>31.0.2023</p>
+</div>
+<div class="left_column_subheader">
+    <h2>KR C4</h2>
+    <h3>KUKA College Tychy</h3>
+    <p>09.09.2022</p>
+</div>
+<div class="left_column_subheader">
+    <h2>TR7231Zpl TwinCAT 3 HMI</h2>
+    <h3>Beckhoff Automation Sp. z o.o.</h3>
+    <h3>Ruczajowa 15, 05-500 Żabieniec</h3>
+    <p>06.2021</p>
+</div>
+<div class="left_column_subheader">
+    <h2>TR1331pl TwinCAT 3 PLC</h2>
+    <h3>Beckhoff Automation Sp. z o.o.</h3>
+    <h3>Ruczajowa 15, 05-500 Żabieniec</h3>
+    <p>08.2018</p>
+</div>
+<div class="left_column_subheader">
+    <h2>Inverters</h2>
+    <h3>Mitsubishi Electric Polska</h3>
+    <h3>ul. Krakowiaków 44, 02-255 Warszawa</h3>
+    <p>10.2018</p>
+</div>
+<div class="left_column_subheader">
+    <h2>PLC GX Works 3, MELSERVO GT DESIGNER</h2>
+    <h3>Mitsubishi Electric Polska</h3>
+    <h3>ul. Krakowiaków 44, 02-255 Warszawa</h3>
+    <p>03.2018</p>
+</div>
+
+<h1 class="left_column_header">LANGUAGES</h1>
+<div class="left_column_subheader">
+    <p>Polish - Native</p>
+    <p>English - Intermediate</p>
+    <p>German - Beginner</p>
+</div>
+<h1 class="left_column_header">EXPERTISE</h1>
+<div class="left_column_subheader">
+    <p>TwinCAT 3</p>
+    <p>Industrial Automation</p>
+    <p>Computer Networks</p>
+</div>
+<h1 class="left_column_header">HOBBIES</h1>
+<div class="left_column_subheader">
+    <p>Motorcylces</p>
+    <p>Chess</p>
+    <p>Volleyball</p>
+</div>
+{% endblock %}
 {% block content %}
-<main class="main-container"></main>
-    <h1>Curriculum Vitae</h1>
-    <div class="cv-download">
-        <a href="{{ url_for('static', filename='PZ_06_01_2024.pdf') }}" class="download-button" download>
-            <button>Pobierz CV</button>
-        </a>
-    </div>
-    <h1>Doświadczenie Zawodowe</h1>
-    
-    <div class="experience-grid">
-        <div class="experience-card">
-            <div class="experience-header">
-                <h3>Automatyk</h3>
-                <span class="date">2020 - Obecnie</span>
-            </div>
-            <p class="company">Firma Przemysłowa</p>
-            <ul>
-                <li>Projektowanie i wdrażanie systemów automatyki przemysłowej</li>
-                <li>Programowanie sterowników PLC i systemów SCADA</li>
-                <li>Optymalizacja procesów produkcyjnych</li>
-                <li>Integracja systemów robotycznych</li>
-                <li>Zarządzanie projektami automatyzacji</li>
-            </ul>
-        </div>
+<div class="cv-download">
+    <h1>Experience</h1>
+    <a href="{{ url_for('generate_cv') }}"> 
+        <button class="download-button">Generate CV</button>
+    </a>
+</div>
 
-        <!-- Add more experience cards with your actual experience -->
-    </div>
-
-    <div class="skills-section">
-        <h2>Umiejętności Techniczne</h2>
-        <div class="skills-grid">
-            <div class="skill-card">
-                <h4>Programowanie PLC</h4>
-                <ul>
-                    <li>Siemens S7</li>
-                    <li>Allen Bradley</li>
-                    <li>Beckhoff</li>
-                </ul>
-            </div>
-            <div class="skill-card">
-                <h4>Systemy SCADA</h4>
-                <ul>
-                    <li>WinCC</li>
-                    <li>InTouch</li>
-                    <li>iFIX</li>
-                </ul>
-            </div>
-            <!-- Add more skill cards -->
+<div class="experience-grid">
+    <div class="experience-card">
+        <div class="experience-header">
+            <h3>Automation Engineer</h3>
+            <p>Amazemet https://www.amazemet.com/</p>
+            <span>02.2023- Present</span>
         </div>
+        <ul>
+            <li>integrate of LLM llama3.2-vision model for control time-based machine actions</li>
+            <li>Development of python scripts for post-processing of machine vision data and integration with PLC</li>
+            <li>Video analysis (detection and segmentation) utilizing YOLOv8 model</li>
+            <li>Machine data analysis and predictive maintenance using LSTM model for time-series forecasting</li>
+            <li>Programming and maintenance of Controllino and ESP32 embedded systems</li>
+            <li>Development of C++ application using XirisWeldSDK for Xirs XVC-1000 Camera integration, enabling RTSP streaming and YOLOv8 segmentation</li>
+            <li>Development of C# application using SCAPS SDK to control PSI PS6000W Galvo Welding System based on machine vision segmentation results</li>
+            <li>Migration and modernization of electronics-based control systems to PLC architecture</li>
+            <li>Implementation of TwinCAT NC PTP for XYZ manipulator control control over Xbox controller</li>
+            <li>Configuration and programming of TwinCAT Modbus TCP/RTU communication</li>
+            <li>Implementation of TwinCAT Serial Communication protocols</li>
+            <li>Commissioning of KUKA Robots with TwinSAFE integration for PROFIsafe master safety control</li>
+            <li>Development of HMI interfaces using Weintek EasyBuilderPro</li>
+            <li>Support in project execution and documentation in compliance with EU grant requirements</li>
+        </ul>
     </div>
-
-    <div class="education-section">
-        <h2>Wykształcenie</h2>
-        <div class="education-card">
-            <div class="education-header">
-                <h3>Automatyka i Robotyka</h3>
-                <span class="date">2015 - 2020</span>
-            </div>
-            <p class="school">Politechnika</p>
-            <p class="specialization">Specjalizacja: Systemy sterowania</p>
-            <ul>
-                <li>Projektowanie systemów automatyki</li>
-                <li>Robotyka przemysłowa</li>
-                <li>Systemy wizyjne</li>
-            </ul>
+    <div class="experience-card">
+        <div class="experience-header">
+            <h3>PLC Programmer</h3>
+            <p>SII Sp. z o.o. / al. Niepodległości 69, 02-626 Warszawa</p>
+            <span>09.2022 - 01.2023</span>
         </div>
-    </div>
+        <ul>
+            <li>Comissioning for Swisslog on Beckhoff PLC</li>
+            <li>KUKA robots, first startup procedure, axis calibration, launching robots in automatic mode.</li>
+        </ul>
+    </div>    
+    <div class="experience-card">
+        <div class="experience-header">
+            <h3>Automation Engineer</h3>
+            <p>Graham Packaging Poland Sp. z o.o. / Żegańska 1</p>
+            <span>07.2018 – 09.2022</span>
+        </div>
+        <ul>
+            <li>PLC Programing Industrial machines, Blow Molders Leak Testers and
+            Conveyors active take out in TwinCAT 3 and TwinCAT 2</li>
+            <li>PILZ Safety Controller Programing and setup</li>
+            <li>Creating BOM (Bill of Materials)</li>
+            <li>Designing and verifying electrical schematics</li>
+            <li>Implementing changes in the electrical installation of the machine, supervising electricians work, and ensuring compliance with electrical schematics</li>
+            <li>Preparing SCADA Visualisations in AVEVA Indusoft</li>
+            <li>Preparing the service program, implementing a new program on-
+            site.</li>
+            <li>TwinCAT Motion to control screw in bottle timming machines</li>
+        </ul>
+    </div>     
+    <div class="experience-card">
+        <div class="experience-header">
+            <h3>Automation Engineer</h3>
+            <p>Therm-Trade / Nowa Wieś Warszawska</p>
+            <span>10.2017 – 07.2018</span>
+        </div>
+        <ul>
+            <li>Programming machines for metalworking industry</li>
+            <li>Equipment modernization</li>
+            <li>Maintenance of the production line</li>
+        </ul>
+    </div>   
+    <div class="experience-card">
+        <div class="experience-header">
+            <h3>Maintenance Automation Engineer</h3>
+            <p>ZPM Mlekpol oddział w Mrągowie / Mrągowo</p>
+            <span>08.2016 – 09.2017</span>
+        </div>
+        <ul>
+            <li>Maintenance of operations</li>
+            <li>Modernization of industrial lines and production machines</li>
+        </ul>
+    </div>             
+    <div class="experience-card">
+        <div class="experience-header">
+            <p>Github Community</p>
+            <span>11.2021 – present</span>
+        </div>
+        <ul>
+            <li>application to show how to use Twincat.Ads and Twincat.Route </li>
+            <a href="https://github.com/pempek18/Beckhoff_AdsClientConsole">https://github.com/pempek18/Beckhoff_AdsClientConsole</a>
+            <li>.net core WinUI application to get all variables from plc print them and control over Windows Desktop client. </li>
+            <a href="https://github.com/pempek18/TwinCat_WinUI_Client">https://github.com/pempek18/TwinCat_WinUI_Client</a>
+            <li>python application for converting from cartesian to spherical </li>
+            <a href="https://github.com/pempek18/Spherical_coordinate_system">https://github.com/pempek18/Spherical_coordinate_system</a>
+        </ul>
+    </div>       
+</div>
 {% endblock %} 
