@@ -25,13 +25,13 @@ nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .logo {
     font-weight: 600;
     font-size: 2rem;
-    background-color:grey;
+    background-color: grey;
     font-family: 'Cascadia Code', monospace;
     border-radius: 10px;
     padding: 5px 10px;
@@ -47,25 +47,26 @@ nav {
     color: var(--primary-color);
     font-weight: 500;
     transition: color 0.3s ease;
-    background-color:grey;
+    background-color: grey;
     border-radius: 10px;
     padding: 5px 10px;
 }
 
 .menu a:hover {
     color: var(--accent-color);
-    background-color:white;
+    background-color: white;
     border-radius: 10px;
     padding: 5px 10px;
 }
 
 .header-nav {
-    background-color:yellow;
-    padding:  5rem;
+    background-color: yellow;
+    padding: 5rem;
     /* border-radius: 20px; */
 }
+
 .main-container {
-    background-color:white;
+    background-color: white;
     font-size: 1.0rem;
 }
 
@@ -128,9 +129,9 @@ nav {
 }
 
 .project-card p {
-    padding:  1rem 1rem;
+    padding: 1rem 1rem;
     color: #666;
-} 
+}
 
 .cv-download {
     display: flex;
@@ -143,19 +144,20 @@ nav {
     color: var(--primary-color);
     font-weight: 500;
     transition: color 0.3s ease;
-    background-color:white;
+    background-color: white;
     border-radius: 10px;
     padding: 5px 10px;
 }
 
 .download-button:hover {
     color: var(--accent-color);
-    background-color:yellow;
+    background-color: yellow;
     border-radius: 10px;
     padding: 5px 10px;
 }
+
 .sidebar {
-    background-color:grey;
+    background-color: grey;
     height: 100%;
     width: 100%;
     display: flex;
@@ -164,6 +166,24 @@ nav {
     box-sizing: border-box;
     min-height: 100%;
 }
+
 .profile-photo {
     border: 10px solid white;
+}
+.left-column {
+    background-color: grey;
+    text-align: center;
+    vertical-align: top;
+}
+.right-column {
+    background-color: white;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+td {
+    padding: 0;
 }
