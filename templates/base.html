@@ -14,7 +14,7 @@
                 <div class="sidebar">
                     <!-- Left column content -->
                     <div class="profile-section">
-                        <img src="{{ url_for('static', filename='profile.jpg') }}" alt="Profile Photo" class="profile-photo">
+                        <img src="{{ url_for('static', filename='img/profile.jpg') }}" alt="Profile Photo" class="profile-photo">
                     </div>
                 </div>
             </td>
@@ -39,10 +39,10 @@
                         <h3 style="margin-bottom: 20px;">Automation Engineer</h3>
                     </div>
                     <div class="contact-info">
-                        <p style="display: flex; align-items: left;"><img src="{{ url_for('static', filename='email.png') }}" alt="Email" class="contact-icon">ZadrogaPatryk18@gmail.com</p>
-                        <p style="display: flex; align-items: left;"><img src="{{ url_for('static', filename='phone.png') }}" alt="Phone" class="contact-icon">+48 516 152 644</p>
-                        <p style="display: flex; align-items: left;"><img src="{{ url_for('static', filename='github.png') }}" alt="Phone" class="contact-icon">github.com/pempek18</p>
-                        <p style="display: flex; align-items: left;"><img src="{{ url_for('static', filename='location.png') }}" alt="Location" class="contact-icon">Location: Poland</p>
+                        <p style="display: flex; align-items: left;"><img src="{{ url_for('static', filename='img/email.png') }}" alt="Email" class="contact-icon"><a href="mailto:ZadrogaPatryk18@gmail.com" target="_blank">ZadrogaPatryk18@gmail.com</a></p>
+                        <p style="display: flex; align-items: left;"><img src="{{ url_for('static', filename='img/phone.png') }}" alt="Phone" class="contact-icon">+48 516 152 644</p>
+                        <p style="display: flex; align-items: left;"><img src="{{ url_for('static', filename='img/github.png') }}" alt="Phone" class="contact-icon"> <a href="https://github.com/pempek18" target="_blank">github.com/pempek18</a></p>
+                        <p style="display: flex; align-items: left;"><img src="{{ url_for('static', filename='img/location.png') }}" alt="Location" class="contact-icon">Warsaw,Poland</p>
                     </div>
                     <div class="left-column-content">
                         {% block left_column_content %}{% endblock %}

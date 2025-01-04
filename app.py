@@ -1,7 +1,10 @@
 from flask import Flask, render_template, make_response
-import python_pdfkit as pdfkit
+import pdfkit
+import os
 
 app = Flask(__name__)
+
+config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
 
 @app.route('/')
 def index():
@@ -25,23 +28,55 @@ def production():
 
 @app.route('/generate_cv')
 def generate_cv():
-    # Render the template to HTML
-    html = render_template('experience.html')
+    static_dir = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'static')
     
-    # Configure PDF options if needed
+    # Add PDF-specific styles to hide buttons
+    pdf_specific_styles = """
+    <style>
+        .menu a {
+            display: none !important;
+        }
+        .cv-download {
+            display: none !important;
+        }
+        .header-nav::before {
+            font-family: 'Cascadia Code', monospace !important;
+            color: var(--cv-grey) !important;
+            content: "Patryk Zadroga Automation Engineer" !important;
+            font-size: 3rem !important;
+            font-weight: bold !important;
+            text-align: center !important;
+        }
+    </style>
+    """
+    
+    # Add the PDF styles to the HTML
+    html = pdf_specific_styles + render_template('experience.html')
+    
     options = {
         'page-size': 'A4',
-        'margin-top': '0.75in',
-        'margin-right': '0.75in',
-        'margin-bottom': '0.75in',
-        'margin-left': '0.75in',
         'encoding': "UTF-8",
+        'enable-local-file-access': True,
+        'user-style-sheet': os.path.join(static_dir, 'styles.css'),
+        'no-stop-slow-scripts': True,
+        'javascript-delay': 1000,
+        'load-error-handling': 'ignore',
+        'load-media-error-handling': 'ignore'
     }
     
-    # Generate PDF from HTML
-    pdf = pdfkit.from_string(html, False, options=options)
+    # Update image path replacement to handle all images
+    # Replace all static file URLs with absolute file paths
+    for image in ['email.png', 'phone.png', 'github.png', 'location.png', 'profile.jpg']:
+        html = html.replace(
+            f'/static/img/{image}',
+            'file:///' + os.path.join(static_dir, 'img', image).replace(os.sep, '/')
+        )    
+    # For debugging: you can uncomment this to see the processed HTML
+    # with open('debug.html', 'w', encoding='utf-8') as f:
+    #     f.write(html)
     
-    # Create the response
+    pdf = pdfkit.from_string(html, False, options=options, configuration=config)
+    
     response = make_response(pdf)
     response.headers['Content-Type'] = 'application/pdf'
     response.headers['Content-Disposition'] = 'attachment; filename=cv.pdf'
