@@ -122,17 +122,27 @@ nav {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease;
+    transition: all 0.3s ease;
+    position: relative;
+    height: 350px;
 }
 
 .project-card:hover {
     transform: translateY(-5px);
+    height: fit-content;
+    min-height: 650px;
+    max-height: none;
+    z-index: 1;
 }
 
+
 .project-card img {
-    width: 100%;
+    width: 95%;
+    height: auto;
     height: 200px;
     object-fit: cover;
+    display: block;
+    margin: 0 auto;
 }
 
 .project-card h3 {
@@ -141,8 +151,39 @@ nav {
 }
 
 .project-card p {
-    padding: 1rem 1rem;
+    /* padding: 1rem 1rem; */
     color: #666;
+    opacity: 0;
+    height: 0;
+    margin-top: -50%;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover p {
+    opacity: 1;
+    /* height: auto; */
+    margin-top: 0%;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
+}
+
+.project-card ul {
+    /* padding: 1rem 1rem; */
+    color: #666;
+    opacity: 0;
+    height: 0;
+    margin-top: -50%;
+    position: absolute;
+    transition: all 0.3s ease;
+}
+
+.project-card:hover ul {
+    opacity: 1;
+    /* height: auto; */
+    margin-top: 0%;
+    margin-bottom: 1rem;
+    margin-left: 1rem;
 }
 
 .cv-download {

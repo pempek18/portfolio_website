@@ -84,5 +84,5 @@ def generate_cv():
     return response
 
 if __name__ == '__main__':
-    # app.run(host='0.0.0.0', debug=True) 
-    app.run(debug=True)
+    # app.run(host='0.0.0.0', debug=False) # for production in docker container
+    app.run(debug=True) # for local debug
