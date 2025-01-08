@@ -44,8 +44,9 @@
                         <p style="display: flex; align-items: left;"><img src="{{ url_for('static', filename='img/github.png') }}" alt="Phone" class="contact-icon"> <a href="https://github.com/pempek18" target="_blank">github.com/pempek18</a></p>
                         <p style="display: flex; align-items: left;"><img src="{{ url_for('static', filename='img/location.png') }}" alt="Location" class="contact-icon">Warsaw,Poland</p>
                     </div>
-                    <div class="left-column-content">
-                        {% block left_column_content %}{% endblock %}
+                    <script src="{{ url_for('static', filename='script.js') }}"></script>
+                    <div class="left-column-content" id="left_column_content">
+                        
                     </div>
                 </div>
             </td>

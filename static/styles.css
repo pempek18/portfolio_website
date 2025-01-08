@@ -14,11 +14,23 @@
     box-sizing: border-box;
 }
 
+html {
+    height: 100%;
+    margin: 0;
+}
+
 body {
     font-family: 'Cascadia Code', monospace;
     background-color: var(--background-color);
     color: var(--primary-color);
     line-height: 1.6;
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
 }
 
 nav {
@@ -71,24 +83,27 @@ nav {
     background-color: white;
     font-size: 1.0rem;
     width: 100%;
-    max-width: 100%;
+    height: 100%;
     margin: 0;
     padding: 20px;
     box-sizing: border-box;
     margin-top: 0;
     vertical-align: top;
+    flex: 1;
+    min-height: 100vh;
 }
 
 .main-description {
     padding: 2rem;
     line-height: 1.6;
     width: 100%;
+    height: 100%;
     margin-top: 0;
     vertical-align: top;
 }
 
 .text-list {
-    list-style-type: none;
+    list-style-type: disc;
     padding-left: 2rem;
     font-family: 'Cascadia Code', monospace;
 }
@@ -115,6 +130,8 @@ nav {
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 2rem;
     padding: 2rem 2rem;
+    position: relative;
+    padding-bottom: 300px;
 }
 
 .project-card {
@@ -122,74 +139,90 @@ nav {
     border-radius: 8px;
     overflow: hidden;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
+    transition: all 0.3s ease, z-index 0s;
     position: relative;
     height: 350px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px;
 }
 
 .project-card:hover {
-    transform: translateY(-5px);
-    height: fit-content;
-    min-height: 650px;
-    max-height: none;
-    z-index: 1;
+    transform: translateY(-50px);
+    position: relative;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    width: 400px;
+    height: 400px;
+    z-index: 10;
 }
 
 
 .project-card img {
-    width: 95%;
-    height: auto;
-    height: 200px;
-    object-fit: cover;
+    position: sticky;
+    top: 0;
+    width: 100%;
+    height: 300px;
+    object-fit: contain;
     display: block;
     margin: 0 auto;
+    padding: 10px;
+    transition: all 0.3s ease, z-index 0s;
+}
+
+.project-card:hover img {
+    width: 400px;
 }
 
 .project-card h3 {
     padding: 1rem;
     margin: 0;
+    position: relative;
 }
 
 .project-card p {
-    /* padding: 1rem 1rem; */
     color: #666;
     opacity: 0;
     height: 0;
     margin-top: -50%;
-    position: absolute;
-    transition: all 0.3s ease;
-}
-
-.project-card:hover p {
-    opacity: 1;
-    /* height: auto; */
-    margin-top: 0%;
-    margin-bottom: 1rem;
     margin-left: 1rem;
+    transition: all 0.3s ease;
 }
 
 .project-card ul {
-    /* padding: 1rem 1rem; */
     color: #666;
     opacity: 0;
     height: 0;
-    margin-top: -50%;
-    position: absolute;
+    margin-top: +50%;
+    margin-left: 1rem;
+    position: relative;
+    z-index: 1;
     transition: all 0.3s ease;
 }
 
-.project-card:hover ul {
-    opacity: 1;
-    /* height: auto; */
-    margin-top: 0%;
-    margin-bottom: 1rem;
-    margin-left: 1rem;
+.project-card div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-card:hover div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img {
+        width: 48%;
+        height: auto;
+        top: 0;
+        transition: all 0.3s ease;
+    }
 }
 
 .cv-download {
     display: flex;
     justify-content: left;
-    /* margin: 1rem; */
 }
 .cv-download h1 {
     padding-bottom: 30px;
@@ -243,8 +276,11 @@ nav {
     width: 20%;
 }
 .left-column-content {
+    padding-top: 10rem;
+    padding-left: 1rem;
     background-color: var(--cv-grey);
-    text-align: center;
+    color: white;
+    text-align: left;
     vertical-align: top;
 }
 .right-column {
@@ -351,4 +387,22 @@ td {
 }
 .experience-card ul {
     padding-left: 50px;
+}
+
+footer {
+    flex-shrink: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .left-column-content {
+        position: relative;
+        width: 100%;
+    }
+    
+    .contact-info {
+        position: absolute;
+        top: 0;
+        width: 100%;
+        z-index: 1;
+    }
 }
