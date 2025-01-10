@@ -86,7 +86,7 @@ def generate_cv():
 if __name__ == '__main__':
     if os.path.basename(os.path.dirname(os.path.abspath(__file__))) == 'app':
         # For production in Docker container
-        app.run(host='0.0.0.0', debug=False, port=5000)
+        app.run(host='0.0.0.0', debug=False, port=8080)
     else:
         # For local development on Windows
-        app.run(debug=True, port=5000)
+        app.run(debug=True, port=8080)
