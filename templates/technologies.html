@@ -2,13 +2,6 @@
 
 {% block title %}Technologie{% endblock %}
 
-{% block nav_menu %}
-<a href="{{ url_for('production') }}">Realizacje</a>
-<a href="{{ url_for('index') }}">Strona główna</a>
-<a href="{{ url_for('services') }}">Usługi</a>
-<a href="{{ url_for('experience') }}">Doświadczenie</a>
-{% endblock %}
-
 {% block content %}
 
 <h1>Technologie</h1>
@@ -37,6 +30,15 @@
             <li>lokalne aplikacje desktopowe pracujące jako HMI</li>
         </ul>
     </div>
+    <div class="project-card">
+        <h3>Robotics</h3>
+        <img src="static/img/kuka.png" alt="kuka" style="width: 100%; height: auto; padding: 30px; padding-bottom: 30px;">
+        <ul>
+            <li>Programowanie robotów przemysłowych i automatyzacja manipulacji</li>
+            <li>Pierwsze uruchomienia robotów KUKA</li>
+            <li>integracja safety i sterowania robotów z systemami PLC</li>
+        </ul>
+    </div>       
     <div class="project-card">
         <h3>Vision</h3>
         <img src="static/img/ultralytics.png" alt="Vision">
@@ -79,15 +81,6 @@
         </ul>
     </div>
     <div class="project-card">
-        <h3>Robotics</h3>
-        <img src="static/img/kuka.png" alt="kuka" style="width: 100%; height: auto; padding: 30px; padding-bottom: 30px;">
-        <ul>
-            <li>Programowanie robotów przemysłowych i automatyzacja manipulacji</li>
-            <li>Pierwsze uruchomienia robotów KUKA</li>
-            <li>integracja safety i sterowania robotów z systemami PLC</li>
-        </ul>
-    </div>    
-    <div class="project-card">
         <h3>Systemy wbudowane</h3>
         <img src="static/img/cplusplus.png" alt="Aplikacje desktopowe">
         <ul>
@@ -95,7 +88,7 @@
             <li>Programowanie w C/C++</li>
             <li>Realizacje budżetowych rozwiązań na mikrokontrolerach</li>
         </ul>
-    </div>    
+    </div>         
     <div class="project-card">
         <h3>Dockeryzacja aplikacji</h3>
         <img src="static/img/docker.png" alt="Aplikacje desktopowe">

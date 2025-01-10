@@ -8,23 +8,23 @@ config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
 
 @app.route('/')
 def index():
-    return render_template('index.html')
+    return render_template('index.html', active_page='index')
 
 @app.route('/experience')
 def experience():
-    return render_template('experience.html')
+    return render_template('experience.html', active_page='experience')
 
 @app.route('/technologies')
 def technologies():
-    return render_template('technologies.html')
+    return render_template('technologies.html', active_page='technologies')
 
 @app.route('/services')
 def services():
-    return render_template('services.html')
+    return render_template('services.html', active_page='services')
 
 @app.route('/production')
 def production():
-    return render_template('production.html')
+    return render_template('production.html', active_page='production')
 
 @app.route('/generate_cv')
 def generate_cv():

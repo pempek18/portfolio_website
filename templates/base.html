@@ -21,12 +21,11 @@
             <td class="right-column">
                 <nav class="header-nav">
                     <div class="menu">
-                        {% block nav_menu %}
-                        <a href="#index.html">Strona główna</a>
-                        <a href="#technologies.html">Technologie</a>
-                        <a href="#services.html">Usługi</a>
-                        <a href="#experience.html">Doświadczenie</a>
-                        {% endblock %}
+                        <a href="{{ url_for('index') }}" {% if active_page == 'index' %}class="active"{% endif %}>Strona główna</a>
+                        <a href="{{ url_for('production') }}" {% if active_page == 'production' %}class="active"{% endif %}>Realizacje</a>
+                        <a href="{{ url_for('technologies') }}" {% if active_page == 'technologies' %}class="active"{% endif %}>Technologie</a>
+                        <a href="{{ url_for('services') }}" {% if active_page == 'services' %}class="active"{% endif %}>Usługi</a>
+                        <a href="{{ url_for('experience') }}" {% if active_page == 'experience' %}class="active"{% endif %}>Doświadczenie</a>
                     </div>
                 </nav>
             </td>

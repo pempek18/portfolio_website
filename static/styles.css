@@ -73,6 +73,13 @@ nav {
     border-radius: 10px;
     padding: 5px 10px;
 }
+.menu a.active {
+    color: var(--cv-grey);
+    font-weight: bold;
+    background-color: white;
+    border-radius: 10px;
+    padding: 5px 10px;
+}
 
 .header-nav {
     background-color: var(--cv-yellow);
@@ -154,7 +161,7 @@ nav {
     transform: translateY(-50px);
     position: relative;
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
-    width: 400px;
+    width: 100%;
     height: 400px;
     z-index: 10;
 }
@@ -173,13 +180,21 @@ nav {
 }
 
 .project-card:hover img {
-    width: 400px;
+    width: 100%;
 }
 
 .project-card h3 {
     padding: 1rem;
     margin: 0;
     position: relative;
+}
+
+.project-card a {
+    padding: 1rem;
+    margin: 0;
+    position: absolute;
+    bottom: 0;
+    color: #666;
 }
 
 .project-card p {
@@ -249,8 +264,8 @@ nav {
 }
 
 .download-button:hover {
-    color: var(--cv-yellow);
-    background-color: yellow;
+    color: var(--cv-grey);
+    background-color: var(--cv-yellow);
     border-radius: 30px;
     padding: 15px 40px;
 }
