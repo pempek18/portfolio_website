@@ -45,7 +45,8 @@
                     </div>
                     <script src="{{ url_for('static', filename='script.js') }}"></script>
                     <div class="left-column-content" id="left_column_content">
-                        
+                        {% block left_column_content %}
+                        {% endblock %}
                     </div>
                 </div>
             </td>

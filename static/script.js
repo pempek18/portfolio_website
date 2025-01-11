@@ -8,45 +8,68 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
+    // Add click event listener to document to handle clicking outside
+    document.addEventListener('click', (event) => {
+        // If click is outside any project card, clear selection
+        if (!event.target.closest('.project-card')) {
+            document.querySelectorAll('.project-card').forEach(card => {
+                card.classList.remove('selected');
+            });
+            leftColumnContent.innerHTML = '';
+        }
+    });
+
     projectCards.forEach(card => {
         card.addEventListener('mouseenter', () => {
-            // Get list content if it exists
-            const list = card.querySelector('ul')?.innerHTML;
-            // Get paragraph content if it exists
-            const paragraph = card.querySelector('p')?.innerHTML;
-            
-            // Build the content based on what exists
-            let content = '';
-            if (list) content += `<ul>${list}</ul>`;
-            if (paragraph) content += `<p>${paragraph}</p>`;
-            
-            leftColumnContent.innerHTML = content;
+            // Only show hover content if no card is selected
+            const selectedCard = document.querySelector('.project-card.selected');
+            if (!selectedCard) {
+                updateLeftColumn(card);
+            }
         });
 
         card.addEventListener('mouseleave', () => {
-            leftColumnContent.innerHTML = '';
+            // Only clear content if no card is selected
+            const selectedCard = document.querySelector('.project-card.selected');
+            if (!selectedCard) {
+                leftColumnContent.innerHTML = '';
+            }
+        });
+
+        card.addEventListener('click', (event) => {
+            // Prevent this click from bubbling up to document
+            event.stopPropagation();
+            
+            const wasSelected = card.classList.contains('selected');
+            
+            // Remove selected class from all cards
+            document.querySelectorAll('.project-card').forEach(c => {
+                c.classList.remove('selected');
+            });
+
+            if (!wasSelected) {
+                // Select this card if it wasn't previously selected
+                card.classList.add('selected');
+                updateLeftColumn(card);
+            } else {
+                // Clear content if we're unselecting
+                leftColumnContent.innerHTML = '';
+            }
         });
     });
 });
 
-function adjustPadding() {
-    const projectCard = document.querySelector('.projects-grid');
-    const leftColumnContent = document.getElementById('left_column_content');
+// Helper function to update left column content
+function updateLeftColumn(card) {
+    // Get list content if it exists
+    const list = card.querySelector('ul')?.innerHTML;
+    // Get paragraph content if it exists
+    const paragraph = card.querySelector('p')?.innerHTML;
     
-    const projectCardHeight = projectCard.offsetHeight;
-    const gridRows = Math.ceil(projectCardHeight / 400); // Calculate number of 400px rows
-    const minPadding = (10 * 16); // 10rem in pixels (assuming 1rem = 16px)
-    const gridPadding = gridRows * 400; // Additional padding based on grid rows
+    // Build the content based on what exists
+    let content = '';
+    if (list) content += `<ul>${list}</ul>`;
+    if (paragraph) content += `<p>${paragraph}</p>`;
     
-    const totalPadding = Math.max(minPadding + gridPadding, projectCardHeight + 20);
-    leftColumnContent.style.paddingTop = totalPadding + 'px';
-    if (window.innerWidth > 768) {
-        leftColumnContent.style.paddingTop = '10rem';
-    }
+    leftColumnContent.innerHTML = content;
 }
-
-// Run on page load
-window.addEventListener('load', adjustPadding);
-
-// Run on window resize
-window.addEventListener('resize', adjustPadding);
