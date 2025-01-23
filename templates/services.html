@@ -1,85 +1,140 @@
 {% extends "base.html" %}
 
-{% block title %}Usługi{% endblock %}
+{% block title %}
+    {% if lang == 'en' %}Services{% else %}Usługi{% endif %}
+{% endblock %}
 
 {% block content %}
-<h1>Usługi</h1>
+<h1>{% if lang == 'en' %}Services{% else %}Usługi{% endif %}</h1>
 
 <div class="projects-grid">
     <div class="project-card">
-        <h3>Modernizacja Maszyn</h3>
-        <img src="static/img/modernizacja_maszyn.jpg" alt="Modernizacja Maszyn" style="width: 100%; height: auto;">
+        <h3>{% if lang == 'en' %}Machine Modernization{% else %}Modernizacja Maszyn{% endif %}</h3>
+        <img src="static/img/modernizacja_maszyn.jpg" alt="Machine Modernization" style="width: 100%; height: auto;">
         <ul>
+            {% if lang == 'en' %}
+            <li>Replacement of legacy control systems with modern PLC controllers</li>
+            <li>Integration of new sensors and safety systems</li>
+            <li>Production process optimization through automation</li>
+            <li>Drive systems and motion control modernization</li>
+            <li>Implementation of vision systems and quality control</li>
+            <li>Machine adaptation to current safety standards</li>
+            {% else %}
             <li>Wymiana starych systemów sterowania na nowoczesne sterowniki PLC</li>
             <li>Integracja nowych czujników i systemów bezpieczeństwa</li>
             <li>Optymalizacja procesów produkcyjnych poprzez automatyzację</li>
             <li>Modernizacja napędów i systemów ruchu</li>
             <li>Implementacja systemów wizyjnych i kontroli jakości</li>
             <li>Dostosowanie maszyn do aktualnych norm bezpieczeństwa</li>
+            {% endif %}
         </ul>
     </div>
 
     <div class="project-card">
-        <h3>Wsparcie w przemyśle</h3>
-        <img src="static/img/wsparcie.jpg" alt="Wsparcie w przemyśle" style="width: 100%; height: auto;">
+        <h3>{% if lang == 'en' %}Industrial Support{% else %}Wsparcie w przemyśle{% endif %}</h3>
+        <img src="static/img/wsparcie.jpg" alt="Industrial Support" style="width: 100%; height: auto;">
         <ul>
+            {% if lang == 'en' %}
+            <li>Audit and optimization of existing automation systems</li>
+            <li>Support in implementing new technologies</li>
+            <li>Diagnostics and problem solving</li>
+            <li>Consulting in automation component selection</li>
+            <li>Assistance with integration of various control systems</li>
+            {% else %}
             <li>Audyt i optymalizacja istniejących systemów automatyki</li>
             <li>Wsparcie przy wdrażaniu nowych technologii</li>
             <li>Diagnostyka i rozwiązywanie problemów</li>
             <li>Doradztwo w zakresie doboru komponentów automatyki</li>
             <li>Pomoc przy integracji różnych systemów sterowania</li>
+            {% endif %}
         </ul>
     </div>
 
     <div class="project-card">
-        <h3>Aplikacje Dla firm</h3>
-        <img src="static/img/aplikacje.jpg" alt="Aplikacje Dla firm" style="width: 100%; height: auto;">
+        <h3>{% if lang == 'en' %}Business Applications{% else %}Aplikacje Dla firm{% endif %}</h3>
+        <img src="static/img/aplikacje.jpg" alt="Business Applications" style="width: 100%; height: auto;">
         <ul>
+            {% if lang == 'en' %}
+            <li>Development of dedicated industrial applications and control systems</li>
+            <li>Design and implementation of HMI interfaces</li>
+            <li>Production data reporting and analysis systems</li>
+            <li>Database system integration</li>
+            <li>Real-time process monitoring applications</li>
+            <li>Solutions utilizing artificial intelligence and machine learning</li>
+            {% else %}
             <li>Tworzenie dedykowanych aplikacji przemysłowych i systemów sterowania</li>
             <li>Projektowanie i implementacja interfejsów HMI</li>
             <li>Systemy raportowania i analizy danych produkcyjnych</li>
             <li>Integracja systemów z bazami danych</li>
             <li>Aplikacje do monitorowania procesów w czasie rzeczywistym</li>
             <li>Rozwiązania wykorzystujące sztuczną inteligencję i uczenie maszynowe</li>
+            {% endif %}
         </ul>
     </div>
 
     <div class="project-card">
-        <h3>Produkcja maszyn</h3>
-        <img src="static/img/budowa_maszyn.jpg" alt="Produkcja maszyn" style="width: 100%; height: auto;">
+        <h3>{% if lang == 'en' %}Machine Manufacturing{% else %}Produkcja maszyn{% endif %}</h3>
+        <img src="static/img/budowa_maszyn.jpg" alt="Machine Manufacturing" style="width: 100%; height: auto;">
         <ul>
+            {% if lang == 'en' %}
+            <li>Comprehensive project execution from concept to implementation</li>
+            <li>Design and construction of special-purpose machines</li>
+            <li>Integration of vision systems and quality control</li>
+            <li>Implementation of advanced control algorithms</li>
+            <li>Compliance with safety standards and industrial regulations</li>
+            <li>Technical documentation and operator training</li>
+            {% else %}
             <li>Kompleksowa realizacja projektów od koncepcji po wdrożenie</li>
             <li>Projektowanie i budowa maszyn specjalnego przeznaczenia</li>
             <li>Integracja systemów wizyjnych i kontroli jakości</li>
             <li>Implementacja zaawansowanych algorytmów sterowania</li>
             <li>Zgodność z normami bezpieczeństwa i standardami przemysłowymi</li>
             <li>Dokumentacja techniczna i szkolenia dla operatorów</li>
+            {% endif %}
         </ul>
     </div>
 
     <div class="project-card">
-        <h3>Lakiernia Proszkowa</h3>
-        <img src="static/img/lakiernia.jpg" alt="Lakiernia" style="width: 100%; height: auto;">
+        <h3>{% if lang == 'en' %}Powder Coating{% else %}Lakiernia Proszkowa{% endif %}</h3>
+        <img src="static/img/lakiernia.jpg" alt="Powder Coating" style="width: 100%; height: auto;">
         <ul>
+            {% if lang == 'en' %}
+            <li>Professional industrial coating services</li>
+            <li>Powder coating of metal elements</li>
+            <li>Wet painting with various paint types</li>
+            <li>Surface preparation before painting</li>
+            <li>Anti-corrosion protection</li>
+            <li>Decorative painting and specialized coatings</li>
+            {% else %}
             <li>Profesjonalne usługi lakierowania przemysłowego</li>
             <li>Malowanie proszkowe elementów metalowych</li>
             <li>Lakierowanie mokre różnymi typami farb</li>
             <li>Przygotowanie powierzchni przed malowaniem</li>
             <li>Zabezpieczenia antykorozyjne</li>
             <li>Malowanie dekoracyjne i specjalistyczne powłoki</li>
+            {% endif %}
         </ul>
     </div>
 
     <div class="project-card">
-        <h3>Konstrukcja Maszyn</h3>
-        <img src="static/img/konstrukcja.jpg" alt="Konstrukcja" style="width: 100%; height: auto;">
+        <h3>{% if lang == 'en' %}Machine Design{% else %}Konstrukcja Maszyn{% endif %}</h3>
+        <img src="static/img/konstrukcja.jpg" alt="Machine Design" style="width: 100%; height: auto;">
         <ul>
+            {% if lang == 'en' %}
+            <li>Mechanical design in SolidWorks environment</li>
+            <li>Manufacturing of structural elements</li>
+            <li>Integration of automation systems with mechanical design</li>
+            <li>Design optimization for functionality and cost</li>
+            <li>Material and manufacturing technology selection</li>
+            <li>Technical documentation preparation</li>
+            {% else %}
             <li>Projektowanie konstrukcji mechanicznych w środowisku SolidWorks</li>
             <li>Wykonawstwo elementów konstrukcyjnych</li>
             <li>Integracja systemów automatyki z konstrukcją mechaniczną</li>
             <li>Optymalizacja konstrukcji pod kątem funkcjonalności i kosztów</li>
             <li>Dobór materiałów i technologii wykonania</li>
             <li>Przygotowanie dokumentacji technicznej</li>
+            {% endif %}
         </ul>
     </div>
 </div>

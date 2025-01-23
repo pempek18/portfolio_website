@@ -436,3 +436,22 @@ footer {
         z-index: 1;
     }
 }
+
+.language-switcher {
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.language-switcher a {
+    padding: 5px 10px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #ddd;
+    margin-right: 5px;
+}
+
+.language-switcher a.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}

@@ -1,15 +1,58 @@
 {% extends "base.html" %}
 
-{% block title %}Strona główna{% endblock %}
-
+{% block title %}
+    {% if lang == 'en' %}Home{% else %}Strona główna{% endif %}
+{% endblock %}
 
 {% block content %}
-<h1>Oferta</h1>
+<h1>{% if lang == 'en' %}Offer{% else %}Oferta{% endif %}</h1>
+
+{% if lang == 'en' %}
+<p>I offer professional services in industrial automation, combining experience with modern technologies. Since 2018, I have been implementing projects in the following industries:</p>
+<ul class="text-list">
+    <li>Material Atomization, Additive Manufacturing, 3D Printing</li>
+    <ul class="text-list">
+        <li>PLC software for atomizer</li>
+        <li>Automation of atomization process using image analysis models, time series analysis models, large language models</li>
+        <li>Implementation of scientific project under EU funding</li>
+        <li>PLC program for vacuum furnace</li>
+    </ul>
+    <li>Automated warehouses</li>
+    <ul class="text-list">
+        <li>swisslog - internal training on automated warehouses</li>
+        <li>Commisioning of automated warehouse in REWE Magdeburg</li>
+    </ul>
+    <li>Automation of PP and PE packaging production:</li>
+    <ul class="text-list">
+        <li>Extrusion systems</li>
+        <li>Sealability control systems</li>
+        <li>Automated lines of detabers and demoilers</li>
+    </ul>
+    <li>Advanced steel processing:</li>
+    <ul class="text-list">
+        <li>Welding systems</li>
+        <li>Automated drilling systems</li>
+        <li>Industrial bending lines</li>
+    </ul>
+</ul>
+<p>I specialize in implementing innovative solutions, using advanced technologies such as vision systems and AI in industrial automation.</p>
+<p>Combining expertise with PLC systems and IT technologies, I create optimized, cost-effective solutions for the most demanding industrial applications.</p>
+{% else %}
 <p>Oferuję profesjonalne usługi w zakresie automatyki przemysłowej, łącząc doświadczenie z nowoczesnymi technologiami. Od 2018 roku realizuję projekty w następujących branżach:</p>
 <p>
 <ul class="text-list">
-    <li>Atomizacja materiałów i systemy atomizerów</li>
+    <li>Atomizacja materiałów, Produkcja addytywna, wydruk 3D</li>
+    <ul class="text-list">
+        <li>Oprogramowanie na sterownik PLC do atomizera</li>
+        <li>Automatyzacja procesu atomizacji z wykorzystaniem modeli analizy obrazu, modeli analizujących dane czasowe, dużych modeli językowych</li>
+        <li>Realizacja projektu naukowego pod dofinansowanie UE</li>
+        <li>Program plc do pieca próżniowego</li>
+    </ul>
     <li>Systemy automatycznych magazynów</li>
+    <ul class="text-list">
+        <li>swisslog - wewnętrzne szkolenie z autmatycznych magazynów</li>
+        <li>Commisioning Systemu automatycznego magazynu w REWE Magdeburg</li>
+    </ul>
     <li>Automatyzacja produkcji opakowań PP i PE:</li>
     <ul class="text-list">
         <li>Systemy wytłaczania</li>
@@ -26,4 +69,5 @@
 </p>
 <p>Specjalizuję się w implementacji innowacyjnych rozwiązań, wykorzystując zaawansowane technologie, takie jak systemy wizyjne oraz modele AI w automatyce przemysłowej.</p>
 <p>Łączę kompetencje z zakresu systemów PLC oraz technologii IT, co pozwala na tworzenie zoptymalizowanych, efektywnych kosztowo rozwiązań dla najbardziej wymagających aplikacji przemysłowych.</p>
+{% endif %}
 {% endblock %} 

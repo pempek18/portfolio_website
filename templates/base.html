@@ -22,11 +22,25 @@
             <td class="right-column">
                 <nav class="header-nav">
                     <div class="menu">
-                        <a href="{{ url_for('index') }}" {% if active_page == 'index' %}class="active"{% endif %}>Strona główna</a>
-                        <a href="{{ url_for('production') }}" {% if active_page == 'production' %}class="active"{% endif %}>Realizacje</a>
-                        <a href="{{ url_for('technologies') }}" {% if active_page == 'technologies' %}class="active"{% endif %}>Technologie</a>
-                        <a href="{{ url_for('services') }}" {% if active_page == 'services' %}class="active"{% endif %}>Usługi</a>
-                        <a href="{{ url_for('experience') }}" {% if active_page == 'experience' %}class="active"{% endif %}>Doświadczenie</a>
+                        <a href="{{ url_for('index', lang=lang) }}" {% if active_page == 'index' %}class="active"{% endif %}>
+                            {% if lang == 'en' %}Home{% else %}Strona główna{% endif %}
+                        </a>
+                        <a href="{{ url_for('production', lang=lang) }}" {% if active_page == 'production' %}class="active"{% endif %}>
+                            {% if lang == 'en' %}Projects{% else %}Realizacje{% endif %}
+                        </a>
+                        <a href="{{ url_for('technologies', lang=lang) }}" {% if active_page == 'technologies' %}class="active"{% endif %}>
+                            Technologies
+                        </a>
+                        <a href="{{ url_for('services', lang=lang) }}" {% if active_page == 'services' %}class="active"{% endif %}>
+                            {% if lang == 'en' %}Services{% else %}Usługi{% endif %}
+                        </a>
+                        <a href="{{ url_for('experience', lang=lang) }}" {% if active_page == 'experience' %}class="active"{% endif %}>
+                            {% if lang == 'en' %}Experience{% else %}Doświadczenie{% endif %}
+                        </a>
+                        <div class="language-switcher">
+                            <a href="{{ url_for(request.endpoint, lang='pl') }}" {% if lang == 'pl' %}class="active"{% endif %}>PL</a>
+                            <a href="{{ url_for(request.endpoint, lang='en') }}" {% if lang == 'en' %}class="active"{% endif %}>EN</a>
+                        </div>                        
                     </div>
                 </nav>
             </td>

@@ -1,72 +1,110 @@
 {% extends "base.html" %}
 
-{% block title %}Realizacje{% endblock %}
+{% block title %}
+    {% if lang == 'en' %}Projects{% else %}Realizacje{% endif %}
+{% endblock %}
 
 {% block content %}
-<h1>Moje Realizacje</h1>
+<h1>{% if lang == 'en' %}My Projects{% else %}Moje Realizacje{% endif %}</h1>
 
 <div class="projects-grid">
     <div class="project-card">
-        <h3>Automatyczny Atomizer ultradzwiękowy rePowder</h3>
-        <img src="static/img/rePowder.png" alt="Automatyczny Atomizer ultradzwiękowy rePowder">
+        <h3>{% if lang == 'en' %}Ultrasonic Atomizer rePowder{% else %}Automatyczny Atomizer ultradzwiękowy rePowder{% endif %}</h3>
+        <img src="static/img/rePowder.png" alt="rePowder Ultrasonic Atomizer">
         <a href="https://www.amazemet.com/" target="_blank">https://www.amazemet.com/</a>
         <ul>
-            <li>Translacja kodu C++ zbudowanego na framework Arduino i platformie Controlino na sterownik Beckhoff IEC 1131-3 Język ST (ang. Structural Text)</li>
+            {% if lang == 'en' %}
+            <li>Translation of C++ code built on Arduino framework and Controlino platform to Beckhoff PLC IEC 1131-3 Structured Text</li>
+            <li>Implementation of Weintek HMI project according to new design</li>
+            <li>Device automation using image analysis models and large language models</li>
+            <li>Leading the device automation project</li>
+            {% else %}
+            <li>Translacja kodu C++ zbudowanego na framework Arduino i platformie Controlino na sterownik Beckhoff IEC 1131-3 Język ST</li>
             <li>Wykonanie projektu HMI Weintek według nowego design</li>
             <li>Automatyzacja urządzenia z wykorzystaniem modeli analizy obrazu i dużych modeli językowych</li>
             <li>Prowadzenie projektu automatyzacji urządzenia</li>
+            {% endif %}
         </ul>
     </div>
+
     <div class="project-card">
-        <h3>Piec próżniowy inFurner</h3>
-        <img src="static/img/inFurner.png" alt="Piec próżniowy inFurner">
+        <h3>{% if lang == 'en' %}Vacuum Furnace inFurner{% else %}Piec próżniowy inFurner{% endif %}</h3>
+        <img src="static/img/inFurner.png" alt="inFurner Vacuum Furnace">
         <a href="https://www.amazemet.com/" target="_blank">https://www.amazemet.com/</a>
         <ul>
-            <li>Translacja kodu C++ na framework Arduino i platformie Controlino na sterownik Beckhoff IEC 1131-3 Język ST (ang. Structural Text)</li>
+            {% if lang == 'en' %}
+            <li>Translation of C++ code from Arduino framework and Controlino platform to Beckhoff PLC IEC 1131-3 Structured Text</li>
+            <li>Enhancement of vacuum furnace functionality</li>
+            <li>Testing and leading the furnace software implementation project for client deployment</li>
+            {% else %}
+            <li>Translacja kodu C++ na framework Arduino i platformie Controlino na sterownik Beckhoff IEC 1131-3 Język ST</li>
             <li>Rozwinięcie funkcjonalności pieca próżniowego</li>
             <li>Testy i prowadzenie projektu oprogramowania pieca do wdrożenia u klienta</li>
+            {% endif %}
         </ul>
     </div>
+
     <div class="project-card">
-        <h3>Manipulator XYZ</h3>
-        <img src="static/img/manipulator_xyz.png" alt="Manipulator XYZ">
-        <!-- <a href="https://www.amazemet.com/" target="_blank">https://www.amazemet.com/</a> -->
+        <h3>XYZ Manipulator</h3>
+        <img src="static/img/manipulator_xyz.png" alt="XYZ Manipulator">
         <ul>
+            {% if lang == 'en' %}
+            <li>Concept and project management of XYZ manipulator</li>
+            <li>Manipulator control using Xbox controller</li>
+            <li>Specification of automation and electrical components</li>
+            <li>Cost optimization through development of interpolated motion libraries</li>
+            <li>Implementation of automation features such as point sequence repetition and circular motion</li>
+            {% else %}
             <li>Pomysł i prowadzenie projektu manipulatora XYZ</li>
             <li>Sterowanie manipulatora z wykorzystaniem kontrolera xbox</li>
             <li>Specyfikacja komponentów automatyki i elektrycznych</li>
             <li>Optymalizacja kosztów poprzez pisanie bibliotek ruchu interpolowanego</li>
             <li>Realizacja elementów automatyzacji manipulatora jak powtarzanie sekwencji punktów, realizacja ruchu po zadanym okręgu</li>
+            {% endif %}
         </ul>
     </div>
 
     <div class="project-card">
-        <h3>Zgrzewarka wielopunktowa do paneli ogrodzeniowych</h3>
-        <img src="static/img/zgrzewarka.jpeg" alt="Zgrzewarka wielopunktowa do paneli ogrodzeniowych">
-        <p>Wymiana sterowania zgrzewarki wielopunktowej i napisanie oprogramowania na sterowniku Mitsubishi FX5U na podstawie grafu blokowego</p>
+        <h3>{% if lang == 'en' %}Multi-point Welder for Fence Panels{% else %}Zgrzewarka wielopunktowa do paneli ogrodzeniowych{% endif %}</h3>
+        <img src="static/img/zgrzewarka.jpeg" alt="Multi-point Welder">
+        <p>{% if lang == 'en' %}
+            Replacement of multi-point welder control system and development of software for Mitsubishi FX5U PLC based on block diagram
+        {% else %}
+            Wymiana sterowania zgrzewarki wielopunktowej i napisanie oprogramowania na sterowniku Mitsubishi FX5U na podstawie grafu blokowego
+        {% endif %}</p>
     </div>
 
     <div class="project-card">
-        <h3>Tester szczelności</h3>
-        <img src="static/img/tornado.png" alt="Tester szczelności">
+        <h3>{% if lang == 'en' %}Leak Tester{% else %}Tester szczelności{% endif %}</h3>
+        <img src="static/img/tornado.png" alt="Leak Tester">
         <ul>
+            {% if lang == 'en' %}
+            <li>Development of leak tester software</li>
+            <li>Collision detection function based on torque measurement</li>
+            <li>Preparation of automation script for FAT qualification based on test results</li>
+            {% else %}
             <li>Rozwijanie oprogramowania testera szczelności</li>
             <li>Funkcja wykrywania kolizji na podstawie momentu obrotowego</li>
             <li>Przygotowanie skryptu automatyzującego kwalifikację testera FAT na podstawie wyników testów</li>
+            {% endif %}
         </ul>
     </div>
     
     <div class="project-card">
-        <h3>Wytłaczarka do butelek PP Graham VR</h3>
-        <img src="static/img/mega.jpg" alt="Wytłaczarka do butelek PP">
+        <h3>{% if lang == 'en' %}PP Bottle Extruder Graham VR{% else %}Wytłaczarka do butelek PP Graham VR{% endif %}</h3>
+        <img src="static/img/mega.jpg" alt="PP Bottle Extruder">
         <ul>
+            {% if lang == 'en' %}
+            <li>Maintenance and development of Graham VR PP bottle extruder software</li>
+            <li>Development of bottle take-out line functionality based on indexing servos</li>
+            <li>Migration of bottle machine control from Moeller to Beckhoff</li>
+            {% else %}
             <li>Utrzymanie i rozwijanie oprogramowania wytłaczarki do butelek PP Graham VR</li>
             <li>Rozwijanie funkcjonalności lini odbioru butelek opartej na serwach indeksujących butelki</li>
             <li>Wymiany sterowania Butelczarek z sterowania Moeller na Beckhoff</li>
+            {% endif %}
         </ul>
     </div>
-    </div>
-    
 </div>
 
 <div id="left_column_content"></div>

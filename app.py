@@ -1,4 +1,4 @@
-from flask import Flask, render_template, make_response
+from flask import Flask, render_template, make_response, request, g
 import pdfkit
 import os
 
@@ -6,25 +6,36 @@ app = Flask(__name__)
 
 config = pdfkit.configuration(wkhtmltopdf='/usr/bin/wkhtmltopdf')
 
+@app.before_request
+def before_request():
+    g.lang = request.args.get('lang', 'pl')  # Default to Polish if no language specified
+
 @app.route('/')
+@app.route('/index')
 def index():
-    return render_template('index.html', active_page='index')
+    lang = request.args.get('lang', 'pl')
+    return render_template('index.html', active_page='index', lang=lang)
 
 @app.route('/experience')
 def experience():
-    return render_template('experience.html', active_page='experience')
+    lang = request.args.get('lang', 'pl')
+    return render_template('experience.html', active_page='experience', lang=lang)
 
 @app.route('/technologies')
 def technologies():
-    return render_template('technologies.html', active_page='technologies')
+    lang = request.args.get('lang', 'pl')
+    return render_template('technologies.html', active_page='technologies', lang=lang)
 
 @app.route('/services')
 def services():
-    return render_template('services.html', active_page='services')
+    lang = request.args.get('lang', 'pl')
+    return render_template('services.html', active_page='services', lang=lang)
 
 @app.route('/production')
 def production():
-    return render_template('production.html', active_page='production')
+    # Get language from request args, default to 'pl' if not specified
+    lang = request.args.get('lang', 'pl')
+    return render_template('production.html', active_page='production', lang=lang)
 
 @app.route('/generate_cv')
 def generate_cv():
