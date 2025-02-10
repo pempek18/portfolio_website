@@ -31,6 +31,36 @@ def services():
     lang = request.args.get('lang', 'pl')
     return render_template('services.html', active_page='services', lang=lang)
 
+@app.route('/services/industrial-support')
+def service_industrial_support():
+    lang = request.args.get('lang', 'pl')
+    return render_template('services/industrial_support.html', active_page='services', lang=lang)
+
+@app.route('/services/modernization')
+def service_modernization():
+    lang = request.args.get('lang', 'pl')
+    return render_template('services/modernization.html', active_page='services', lang=lang)
+
+@app.route('/services/business-applications')
+def service_business_applications():
+    lang = request.args.get('lang', 'pl')
+    return render_template('services/business_applications.html', active_page='services', lang=lang)
+
+@app.route('/services/machine-manufacturing')
+def service_machine_manufacturing():
+    lang = request.args.get('lang', 'pl')
+    return render_template('services/machine_manufacturing.html', active_page='services', lang=lang)
+
+@app.route('/services/powder-coating')
+def service_powder_coating():
+    lang = request.args.get('lang', 'pl')
+    return render_template('services/powder_coating.html', active_page='services', lang=lang)
+
+@app.route('/services/construction')
+def service_construction():
+    lang = request.args.get('lang', 'pl')
+    return render_template('services/construction.html', active_page='services', lang=lang)
+
 @app.route('/production')
 def production():
     # Get language from request args, default to 'pl' if not specified

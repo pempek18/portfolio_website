@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}{% if lang == 'en' %}Industrial Support{% else %}Wsparcie w przemyśle{% endif %}{% endblock %}
+
+{% block content %}
+<div class="cv-download">
+    <h1>{% if lang == 'en' %}Industrial Support{% else %}Wsparcie w przemyśle{% endif %}</h1>
+</div>
+{% if lang == 'en' %}
+<p>I specialize in modernizing machines to improve their performance and efficiency.</p>
+<ul class="text-list">
+    <li>Device Software Development:
+        <ul class="text-list">
+            <li>Creating new software for PLC controllers</li>
+            <li>Expanding existing systems with new functionalities</li>
+            <li>Implementation of advanced control algorithms</li>
+        </ul>
+    </li>
+    <li>Software Development Proposals:
+        <ul class="text-list">
+            <li>Analysis of current solutions and identification of development potential</li>
+            <li>Consulting on modern automation technologies</li>
+            <li>Planning control system modernization paths</li>
+        </ul>
+    </li>
+    <li>Control Optimization:
+        <ul class="text-list">
+            <li>Audit and optimization of processes for efficiency</li>
+            <li>Cost reduction through effective resource utilization</li>
+            <li>Implementation of energy-efficient solutions</li>
+        </ul>
+    </li>
+    <li>Machine Integration:
+        <ul class="text-list">
+            <li>Combining different control systems into one coherent system</li>
+            <li>Implementation of machine-to-machine communication</li>
+            <li>Creation of central supervision and control systems</li>
+        </ul>
+    </li>
+</ul>
+{% else %}
+<p>Oferuję profesjonalne wsparcie w przemyśle, koncentrując się na:</p>
+<ul class="text-list">
+    <li>Rozwoju oprogramowania urządzeń:
+        <ul class="text-list">
+            <li>Tworzenie nowego oprogramowania dla sterowników PLC</li>
+            <li>Rozbudowa istniejących systemów o nowe funkcjonalności</li>
+            <li>Implementacja zaawansowanych algorytmów sterowania</li>
+        </ul>
+    </li>
+    <li>Propozycjach rozwoju oprogramowania:
+        <ul class="text-list">
+            <li>Analiza obecnych rozwiązań i identyfikacja potencjału rozwoju</li>
+            <li>Doradztwo w zakresie nowoczesnych technologii automatyki</li>
+            <li>Planowanie ścieżki modernizacji systemów sterowania</li>
+        </ul>
+    </li>
+    <li>Optymalizacji sterowania:
+        <ul class="text-list">
+            <li>Audyt i optymalizacja procesów pod kątem wydajności</li>
+            <li>Redukcja kosztów poprzez efektywne wykorzystanie zasobów</li>
+            <li>Implementacja rozwiązań energooszczędnych</li>
+        </ul>
+    </li>
+    <li>Integracji maszyn:
+        <ul class="text-list">
+            <li>Łączenie różnych systemów sterowania w jeden spójny system</li>
+            <li>Implementacja komunikacji między maszynami</li>
+            <li>Tworzenie centralnych systemów nadzoru i kontroli</li>
+        </ul>
+    </li>
+</ul>
+{% endif %}
+{% endblock %}

@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}{% if lang == 'en' %}Machines Modernization{% else %}Modernizacja Maszyn{% endif %}{% endblock %}
+
+{% block content %}
+<div class="cv-download">
+    <h1>{% if lang == 'en' %}Machines Modernization{% else %}Modernizacja Maszyn{% endif %}</h1>
+</div>
+{% if lang == 'en' %}
+<p>I specialize in modernizing machines to improve their performance and efficiency.</p>
+<ul class="text-list">
+    <li>Replacement of control systems with modern PLC controllers:
+        <ul class="text-list">
+            <li>Migration from legacy electronic systems to PLC controllers</li>
+            <li>Implementation of new functionalities and safety features</li>
+            <li>Integration with modern HMI visualization systems</li>
+        </ul>
+    </li>
+    <li>Modernization of existing PLC software:
+        <ul class="text-list">
+            <li>Code optimization for performance</li>
+            <li>Implementation of new functionalities</li>
+            <li>Improvement of safety and reliability</li>
+        </ul>
+    </li>
+    <li>Regeneration and replacement of mechanical components:
+        <ul class="text-list">
+            <li>Production of spare parts</li>
+            <li>Replacement of worn components</li>
+            <li>Modernization of mechanical systems</li>
+        </ul>
+    </li>
+    <li>Performance optimization:
+        <ul class="text-list">
+            <li>Process bottleneck analysis</li>
+            <li>Redesign of critical elements</li>
+            <li>Implementation of productivity-enhancing improvements</li>
+        </ul>
+    </li>
+</ul>
+{% else %}
+<p>Specjalizuję się w kompleksowej modernizacji maszyn przemysłowych, oferując:</p>
+<ul class="text-list">
+    <li>Wymianę systemów sterowania na nowoczesne sterowniki PLC:
+        <ul class="text-list">
+            <li>Migracja z przestarzałych systemów elektronicznych na sterowniki PLC</li>
+            <li>Implementacja nowych funkcjonalności i zabezpieczeń</li>
+            <li>Integracja z nowoczesnymi systemami wizualizacji HMI</li>
+        </ul>
+    </li>
+    <li>Modernizację istniejącego oprogramowania PLC:
+        <ul class="text-list">
+            <li>Optymalizacja kodu pod kątem wydajności</li>
+            <li>Implementacja nowych funkcjonalności</li>
+            <li>Poprawa bezpieczeństwa i niezawodności</li>
+        </ul>
+    </li>
+    <li>Regenerację i wymianę elementów mechanicznych:
+        <ul class="text-list">
+            <li>Produkcja części zamiennych</li>
+            <li>Wymiana zużytych komponentów</li>
+            <li>Modernizacja układów mechanicznych</li>
+        </ul>
+    </li>
+    <li>Optymalizację wydajności:
+        <ul class="text-list">
+            <li>Analiza wąskich gardeł procesu</li>
+            <li>Redesign krytycznych elementów</li>
+            <li>Implementacja usprawnień zwiększających produktywność</li>
+        </ul>
+    </li>
+</ul>
+{% endif %}
+{% endblock %}

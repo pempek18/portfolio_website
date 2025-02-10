@@ -248,6 +248,18 @@ nav {
         transition: all 0.3s ease;
     }
 }
+.project-card-link {
+    text-decoration: none;
+    color: inherit;
+    display: block;
+}
+
+.project-card-link:hover .project-card {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
 
 .cv-download {
     display: flex;

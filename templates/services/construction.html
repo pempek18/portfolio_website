@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block title %}{% if lang == 'en' %}Machine Construction{% else %}Konstrukcja Maszyn{% endif %}{% endblock %}
+
+{% block content %}
+<div class="cv-download">
+    <h1>{% if lang == 'en' %}Machine Construction{% else %}Konstrukcja Maszyn{% endif %}</h1>
+</div>
+{% if lang == 'en' %}
+<p>I specialize in designing and manufacturing machines to improve their performance and efficiency.</p>
+<ul class="text-list">
+    <li>Machine and equipment design in SolidWorks:
+        <ul class="text-list">
+            <li>Comprehensive mechanical projects from concept to execution documentation</li>
+            <li>3D modeling of complex mechanical assemblies</li>
+            <li>Creation of detailed technical documentation</li>
+        </ul>
+    </li>
+    <li>Specialization in metal processing machines:
+        <ul class="text-list">
+            <li>Design of multi-point welding machines</li>
+            <li>Construction of wire straightening machines</li>
+            <li>Optimization of existing design solutions</li>
+        </ul>
+    </li>
+    <li>Technical consulting:
+        <ul class="text-list">
+            <li>Project feasibility analysis</li>
+            <li>Selection of optimal design solutions</li>
+            <li>Support in implementing new solutions</li>
+        </ul>
+    </li>
+    <li>Modernization of existing machines:
+        <ul class="text-list">
+            <li>Redesign of outdated constructions</li>
+            <li>Improvement of efficiency and functionality</li>
+            <li>Adaptation to current safety standards</li>
+        </ul>
+    </li>
+</ul>
+{% else %}
+<p>Specjalizuję się w kompleksowej modernizacji maszyn przemysłowych, oferując:</p>
+<ul class="text-list">
+    <li>Projektowanie maszyn i urządzeń w SolidWorks:
+        <ul class="text-list">
+            <li>Kompleksowe projekty mechaniczne od koncepcji do dokumentacji wykonawczej</li>
+            <li>Modelowanie 3D złożonych zespołów mechanicznych</li>
+            <li>Tworzenie szczegółowej dokumentacji technicznej</li>
+        </ul>
+    </li>
+    <li>Specjalizacja w maszynach do obróbki metali:
+        <ul class="text-list">
+            <li>Projektowanie zgrzewarek wielopunktowych</li>
+            <li>Konstrukcja prostowarek do drutu</li>
+            <li>Optymalizacja istniejących rozwiązań konstrukcyjnych</li>
+        </ul>
+    </li>
+    <li>Doradztwo techniczne:
+        <ul class="text-list">
+            <li>Analiza wykonalności projektów</li>
+            <li>Dobór optymalnych rozwiązań konstrukcyjnych</li>
+            <li>Wsparcie przy wdrażaniu nowych rozwiązań</li>
+        </ul>
+    </li>
+    <li>Modernizacja istniejących maszyn:
+        <ul class="text-list">
+            <li>Redesign przestarzałych konstrukcji</li>
+            <li>Poprawa wydajności i funkcjonalności</li>
+            <li>Dostosowanie do aktualnych norm bezpieczeństwa</li>
+        </ul>
+    </li>
+
+</ul>
+{% endif %}
+{% endblock %}

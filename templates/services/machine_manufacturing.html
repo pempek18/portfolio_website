@@ -1,0 +1,79 @@
+{% extends "base.html" %}
+
+{% block title %}{% if lang == 'en' %}Machine Manufacturing{% else %}Produkcja Maszyn{% endif %}{% endblock %}
+
+{% block content %}
+<div class="cv-download">
+    <h1>{% if lang == 'en' %}Machine Manufacturing{% else %}Produkcja Maszyn{% endif %}</h1>
+</div>
+{% if lang == 'en' %}
+<p>I see my future in industrial machine manufacturing,<br> I want the machines to be exceptionally technologically optimized,
+    as well as safe and reliable.
+</p>
+<ul class="text-list">
+    <li>Comprehensive machine production tailored to client needs:
+        <ul class="text-list">
+            <li>Design and construction of machines according to specifications</li>
+            <li>Preparation of technical documentation and prototypes</li>
+            <li>Implementation of production and final assembly</li>
+        </ul>
+    </li>
+    <li>Comprehensive production facilities:
+        <ul class="text-list">
+            <li>Professional industrial powder coating</li>
+            <li>Modern welding shop with certified welders</li>
+            <li>Advanced design department</li>
+        </ul>
+    </li>
+    <li>Experience across multiple industrial sectors:
+        <ul class="text-list">
+            <li>Food and processing industry</li>
+            <li>Metallurgical industry</li>
+            <li>Machinery and automation industry</li>
+        </ul>
+    </li>
+    <li>Integration of modern technologies:
+        <ul class="text-list">
+            <li>Advanced industrial automation systems</li>
+            <li>Implementation of Industry 4.0 solutions</li>
+            <li>Integration of IT systems with production infrastructure</li>
+        </ul>
+    </li>
+</ul>
+{% else %}
+<p>Swoją przyszłosć wiążę z produkcją maszyn przemysłowych,<br> chciałbym, żeby maszyny były wyjątkowo zooptymalizowane technologicznie,
+    a także bezpieczne i niezawodne.
+</p>
+</p>
+<ul class="text-list">
+    <li>Kompleksowa produkcja maszyn pod potrzeby klienta:
+        <ul class="text-list">
+            <li>Projektowanie i konstruowanie maszyn według specyfikacji</li>
+            <li>Wykonanie dokumentacji technicznej i prototypów</li>
+            <li>Realizacja produkcji i montażu końcowego</li>
+        </ul>
+    </li>
+    <li>Kompleksowe zaplecze produkcyjne:
+        <ul class="text-list">
+            <li>Profesjonalna lakiernia przemysłowa</li>
+            <li>Nowoczesna spawalnia z certyfikowanymi spawaczami</li>
+            <li>Zaawansowany dział konstrukcyjny</li>
+        </ul>
+    </li>
+    <li>Doświadczenie z wielu branż przemysłowych:
+        <ul class="text-list">
+            <li>Przemysł spożywczy i przetwórczy</li>
+            <li>Przemysł metalurgiczny</li>
+            <li>Przemysł maszynowy i automatyka</li>
+        </ul>
+    </li>
+    <li>Integracja nowoczesnych technologii:
+        <ul class="text-list">
+            <li>Zaawansowane systemy automatyki przemysłowej</li>
+            <li>Implementacja rozwiązań Przemysłu 4.0</li>
+            <li>Integracja systemów IT z infrastrukturą produkcyjną</li>
+        </ul>
+    </li>
+</ul>
+{% endif %}
+{% endblock %}

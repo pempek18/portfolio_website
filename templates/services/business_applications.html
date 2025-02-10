@@ -1,0 +1,74 @@
+{% extends "base.html" %}
+
+{% block title %}{% if lang == 'en' %}Business Applications{% else %}Aplikacje Dla firm{% endif %}{% endblock %}
+
+{% block content %}
+<div class="cv-download">
+    <h1>{% if lang == 'en' %}Business Applications{% else %}Aplikacje Dla firm{% endif %}</h1>
+</div>
+{% if lang == 'en' %}
+<p>I specialize in developing dedicated industrial applications and control systems.</p>
+<ul class="text-list">
+    <li>Data Entry Automation:
+        <ul class="text-list">
+            <li>Automatic form and database filling</li>
+            <li>Integration with existing ERP systems</li>
+            <li>Data validation and verification</li>
+        </ul>
+    </li>
+    <li>Sequential Process Automation:
+        <ul class="text-list">
+            <li>Intelligent technical documentation printing system</li>
+            <li>Automatic printer selection based on document formats</li>
+            <li>Print queue and priority management</li>
+        </ul>
+    </li>
+    <li>Analytical and Statistical Systems:
+        <ul class="text-list">
+            <li>Automatic report and summary generation</li>
+            <li>Trend analysis and anomaly detection</li>
+            <li>Real-time data visualization</li>
+        </ul>
+    </li>
+    <li>Spectrometric Analysis:
+        <ul class="text-list">
+            <li>Automatic elemental composition analysis</li>
+            <li>Real-time emission monitoring</li>
+            <li>Compliance report generation</li>
+        </ul>
+    </li>
+</ul>
+{% else %}
+<p>Aplikacje dedykowane dla przemysłu, oferujące:</p>
+<ul class="text-list">
+    <li>Automatyzacja wprowadzania danych:
+        <ul class="text-list">
+            <li>Automatyczne wypełnianie formularzy i baz danych</li>
+            <li>Integracja z istniejącymi systemami ERP</li>
+            <li>Walidacja i weryfikacja poprawności danych</li>
+        </ul>
+    </li>
+    <li>Automatyzacja procesów sekwencyjnych:
+        <ul class="text-list">
+            <li>Inteligentny system druku dokumentacji technicznej</li>
+            <li>Automatyczny dobór drukarek do formatów dokumentów</li>
+            <li>Zarządzanie kolejką i priorytetami wydruków</li>
+        </ul>
+    </li>
+    <li>Systemy analityczne i statystyczne:
+        <ul class="text-list">
+            <li>Automatyczne generowanie raportów i zestawień</li>
+            <li>Analiza trendów i wykrywanie anomalii</li>
+            <li>Wizualizacja danych w czasie rzeczywistym</li>
+        </ul>
+    </li>
+    <li>Analiza spektrometryczna:
+        <ul class="text-list">
+            <li>Automatyczna analiza składu pierwiastkowego</li>
+            <li>Monitorowanie emisji w czasie rzeczywistym</li>
+            <li>Generowanie raportów zgodności z normami</li>
+        </ul>
+    </li>
+</ul>
+{% endif %}
+{% endblock %}
