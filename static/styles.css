@@ -467,3 +467,7 @@ footer {
     color: white;
     border-color: #007bff;
 }
+
+#left_column_content {
+    font-size: 100%;
+}
