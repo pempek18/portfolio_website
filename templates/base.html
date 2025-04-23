@@ -29,7 +29,7 @@
                             {% if lang == 'en' %}Projects{% else %}Realizacje{% endif %}
                         </a>
                         <a href="{{ url_for('technologies', lang=lang) }}" {% if active_page == 'technologies' %}class="active"{% endif %}>
-                            Technologies
+                            {% if lang == 'en' %}Technologies{% else %}Technologie{% endif %}
                         </a>
                         <a href="{{ url_for('services', lang=lang) }}" {% if active_page == 'services' %}class="active"{% endif %}>
                             {% if lang == 'en' %}Services{% else %}Usługi{% endif %}
